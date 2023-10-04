@@ -60,15 +60,18 @@ function SignUpForm() {
     const newErrors = {};
 
     if (!validateUsername(formData.name)) {
-      newErrors.name = "Invalid username";
+      if (!formData.name) newErrors.name = "Username is required";
+      else newErrors.name = "Invalid username";
     }
 
     if (!validateFullName(formData.fullName)) {
-      newErrors.fullName = "Full name must be between 3 and 15 characters";
+      if (!formData.fullName) newErrors.fullName = "Full name is required";
+      else newErrors.fullName = "Full name must be between 3 and 15 characters";
     }
 
     if (!validateMobile(formData.mobile)) {
-      newErrors.mobile = "Invalid mobile number";
+      if (!newErrors.mobile) newErrors.mobile = "Mobile is required";
+      else newErrors.mobile = "Invalid mobile number";
     }
 
     if (!validateAge(formData.age)) {
@@ -76,10 +79,12 @@ function SignUpForm() {
     }
 
     if (!validateEmail(formData.email)) {
-      newErrors.email = "Invalid email address";
+      if (!formData.email) newErrors.email = "Email is required";
+      else newErrors.email = "Invalid email address";
     }
 
     if (!validatePassword(formData.password)) {
+      if (!formData.password) newErrors.password = "Password is required";
       newErrors.password = "Invalid password";
     }
 
