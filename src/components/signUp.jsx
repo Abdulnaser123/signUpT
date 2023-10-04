@@ -1,8 +1,7 @@
 /** @format */
 
-// SignUpForm.js
 import React, { useState, useEffect } from "react";
-import Input from "./inputField"; // Import the Input component
+import Input from "./inputField";
 import "./signUp.css";
 
 import {
