@@ -1,0 +1,69 @@
+/** @format */
+
+.form-container {
+  width: 500px;
+  background-color: #eff5fa;
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+}
+.form-container::before {
+  position: absolute;
+  content: "";
+  background-color: #ff9200;
+  width: 100%;
+  height: 3px;
+  bottom: 0px;
+  left: 0px;
+}
+.columns {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 500px) {
+  .columns {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.signUpTitle {
+  text-align: start;
+  margin-left: 35px;
+  margin-top: 20px;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 10%;
+}
+
+.button-container .clear,
+.submit {
+  width: 70px;
+  height: 40px;
+  margin: 0 2px;
+  border: 1px solid #e6ecf1;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button-container .clear {
+  background-color: white;
+}
+.button-container .submit {
+  background-color: #00bc86;
+  color: white;
+}
+.success-message {
+  color: rgb(42, 181, 42);
+  margin: 20px;
+  font-weight: bold;
+}

@@ -1,0 +1,35 @@
+/** @format */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 18% 0;
+  position: relative;
+}
+label {
+  text-align: start;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+select,
+input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #a8a8a8;
+  padding: 2px;
+}
+
+@media (max-width: 500px) {
+  select,
+  input {
+    width: 175px;
+  }
+}
+.error-message {
+  font-size: 13px;
+  color: tomato;
+  text-align: start;
+  position: absolute;
+  top: 70%;
+  padding: 10px 0;
+}
